@@ -21,5 +21,10 @@ public class Runner {
         list2.InsertDataStart(list2,25);
         list2.InsertDataStart(list2,75);
         list2.PrintNode(list2);
+
+        //Insert elements at based on Index Postion
+        System.out.print("Insert Based On Index : ");
+        list.InsertAtPosition(list,99,1);
+        list.PrintNode(list);
     }
 }
