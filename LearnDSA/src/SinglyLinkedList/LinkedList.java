@@ -47,6 +47,26 @@ public class LinkedList {
         newnode.next=list.head;
         list.head=newnode;
     }
+    public void InsertAtPosition(LinkedList list,int data,int index)
+    {
+        Node newnode=new Node(data);
+        Node node=list.head;
+        int dumpIndex=0;
+        if(index==0)
+        {
+            newnode.next=head;
+            head=newnode;
+        }else{
+            while(node.next!=null && dumpIndex<index-1)
+            {
+                node=node.next;
+                dumpIndex++;
+            }
+            newnode.next=node.next;
+            node.next=newnode;
+        }
+
+    }
     public void PrintNode(LinkedList list)
     {
         Node node=list.head;
