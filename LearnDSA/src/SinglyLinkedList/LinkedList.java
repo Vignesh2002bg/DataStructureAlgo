@@ -67,6 +67,52 @@ public class LinkedList {
         }
 
     }
+    public void updateElement(LinkedList list,int data,int index)
+    {
+        if (list.head == null) {
+            System.out.println("The list is empty. No element to update.");
+        }
+
+        Node currentnode = list.head;
+        int currentIndex = 0;
+
+        // Traverse to the node at the specified index
+        while (currentnode != null && currentIndex < index) {
+            currentnode = currentnode.next;
+            currentIndex++;
+        }
+
+        // Check if the index is valid
+        if (currentnode == null) {
+            System.out.println("Index " + index + " out of bounds. No element updated.");
+        }
+        currentnode.data=data;
+
+    }
+    public void removeElement(LinkedList list, int index) {
+        if (list.head == null) {
+            System.out.println("The list is empty. Nothing to remove.");
+            return;
+        }
+
+        if (index == 0) {
+            list.head = list.head.next;
+            return;
+        }
+
+        Node current = list.head;
+        int currentIndex = 0;
+
+        // Traverse the list to find the node before the index
+        while (current != null && currentIndex < index - 1) {
+            current = current.next;
+            currentIndex++;
+        }
+
+        // Remove the node at the given index
+        current.next = current.next.next;
+    }
+
     public void PrintNode(LinkedList list)
     {
         Node node=list.head;
