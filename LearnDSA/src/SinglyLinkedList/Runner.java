@@ -26,5 +26,15 @@ public class Runner {
         System.out.print("Insert Based On Index : ");
         list.InsertAtPosition(list,99,1);
         list.PrintNode(list);
+
+        //Remove element
+        System.out.print("Remove Elements Based On Index : ");
+        list.removeElement(list,1);
+        list.PrintNode(list);
+
+        //Update the element
+        System.out.print("Update Elements Based On Index : ");
+        list2.updateElement(list2,40,1);
+        list2.PrintNode(list2);
     }
 }
